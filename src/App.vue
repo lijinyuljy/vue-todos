@@ -8,8 +8,7 @@
                        placeholder="快写下您要我记住的事吧"
                        autofocus="true"/>
             </li>
-            <li v-for="(todo,index) in todos"
-                :class="{'checked':todo.done}">
+            <li v-for="(todo,index) in todos" :key="index"  :class="{'checked':todo.done}">
                 <input type="checkbox"
                        @change="saveToStore"
                        v-model="todo.done"
